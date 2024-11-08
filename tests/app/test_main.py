@@ -1,6 +1,6 @@
 from fastapi.testclient import TestClient
 
-from app.core.api.main import app
+from app.main import app
 
 
 def test_read_main():

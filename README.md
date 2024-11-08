@@ -84,7 +84,7 @@ When it comes time to deploy streamlit, if you use their cloudhosting option, th
 From within the root directory:
 
 ```
-fastapi dev app/core/api/main.py
+fastapi dev app/main.py
 ```
 
 
