@@ -167,3 +167,4 @@ _out/
 
 # Misc.
 best_model*.pth
+*data/
