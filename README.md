@@ -52,7 +52,7 @@ poetry install
 
 To create an ipykernel associated with this projects virtual env:
 ```
-poetry run python -m ipykernel install --user --name="da_$(basename $(pwd))" --display-name="da_$(basename $(pwd))"
+poetry run python -m ipykernel install --user --name="gm_$(basename $(pwd))" --display-name="gm_$(basename $(pwd))"
 ```
 
 ### Defining and Running Experiments
@@ -71,10 +71,14 @@ Then in a subdirectory `/experiments/observations` I run my Exploratory Data Ana
 
 ### Front End UI Prototyping
 
-For development, I'm storing base ui templates in a folder titled `streamlit`. To serve locally, run the following command:
+For development, I'm storing base ui templates in a folder titled `streamlit`. To serve locally, run the following command on the UI you want to serve
+Example:
 ```
-poetry run streamlit run ./streamlit/text/chat_app.py
+poetry run streamlit run ./streamlit/text/simple_chat_app.py
 ```
+
+Other options include:
+1. `poetry run streamlit run ./streamlit/text/fastapi_chat_app.py`
 
 **Note**
 When it comes time to deploy streamlit, if you use their cloudhosting option, they expect filename and folder structure in a specific way. This workflow is on the roadmap to be defined.
@@ -84,7 +88,7 @@ When it comes time to deploy streamlit, if you use their cloudhosting option, th
 From within the root directory:
 
 ```
-fastapi dev app/main.py
+poetry run fastapi dev app/main.py
 ```
 
 
@@ -106,10 +110,6 @@ For this project I'm using the popular [Python Black Code Formatting](https://gi
 1. Run Model Development Experiments
 1. Prototype frontend UIs quickly
 1. Leverage lightweight model servering api
-1. Deploy prototype frontend for sharability
-1. Deploy model server api
-1. Leverage backend prototyping tools for LLMs integrated with deployable frontend and server
-1. Leverage backend prototyping tools for Image Generation integrated with deployable frontend and server
 
 ### Architecture
 
@@ -119,5 +119,8 @@ For this project I'm using the popular [Python Black Code Formatting](https://gi
 
 ### Roadmap
 
+- Deploy prototype frontend for sharability
+- Deploy model server api
+- Leverage backend prototyping tools for LLMs integrated with deployable frontend and server
+- Leverage backend prototyping tools for Image Generation integrated with deployable frontend and server
 - Add experiment tracking with mlflow: [MLFlow Quick Start](https://mlflow.org/docs/latest/getting-started/intro-quickstart/index.html)
-- Streamlit cloud deployment
