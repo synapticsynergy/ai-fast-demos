@@ -4,6 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Blake Danson <blakedanson@gmail.com>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -21,6 +22,7 @@ torch = "^2.5.1"
 torchvision = "^0.20.1"
 torchaudio = "^2.5.1"
 python-dotenv = "^1.0.1"
+jupyterlab = "^4.3.0"
 
 
 [build-system]
