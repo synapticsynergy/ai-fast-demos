@@ -168,3 +168,6 @@ _out/
 # Misc.
 best_model*.pth
 *data/
+
+saved_models/*
+!saved_models/__init__.py
