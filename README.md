@@ -79,6 +79,7 @@ poetry run streamlit run ./streamlit/text/simple_chat_app.py
 
 Other options include:
 1. `poetry run streamlit run ./streamlit/text/fastapi_chat_app.py`
+1. `poetry run streamlit run ./streamlit/image/image_classify.py`
 
 **Note**
 When it comes time to deploy streamlit, if you use their cloudhosting option, they expect filename and folder structure in a specific way. This workflow is on the roadmap to be defined.
