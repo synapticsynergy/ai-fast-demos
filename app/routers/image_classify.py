@@ -28,13 +28,13 @@ transform = transforms.Compose([
 
 # Load the model
 def load_model(model_path, num_classes):
-    model = models.resnet18(pretrained=False)
+    model = models.resnet18(weights=None)
     num_ftrs = model.fc.in_features
     model.fc = nn.Sequential(
         nn.Dropout(0.2),
         nn.Linear(num_ftrs, num_classes)
     )
-    model.load_state_dict(torch.load(model_path, map_location=device))
+    model.load_state_dict(torch.load(model_path, map_location=device, weights_only=True))
     model = model.to(device)
     model.eval()
     return model
